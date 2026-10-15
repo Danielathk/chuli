@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Chu Li</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="style.css?v=20261015172823">
+</head>
+<body>
+<header id="site-header"></header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Research</h1>
+    <p>First-principles calculations, atomistic simulations, kinetic modeling, and machine learning for
+      phase transitions, chemistry under extreme conditions, materials design, and high-performance perovskite solar cells.</p>
+  </div>
+</section>
+
+<main class="container">
+  <h2>Overview</h2>
+  <p>I am a computational scientist working at the intersection of first-principles calculations, atomistic
+        simulation, kinetic modeling, and machine learning. My work spans phase transitions, chemistry under extreme
+        conditions, 2D materials, and materials design, from ice nucleation, nanoconfined water, and carbon reactions in
+        supercritical fluids to phonons in twisted bilayer graphene and materials discovery for perovskite solar cells. My current focus is machine learning accelerated discovery of
+        materials for stable, high-performance perovskite solar cells.</p>
+
+  <!-- Each direction shows a figure from images/pubs/ -->
+  <div class="direction reveal" id="discovery">
+    <div class="figure has-img"><img src="images/ai-discovery.png" alt="AI-accelerated discovery workflow: LLM data mining, adsorption energy predictions, feature importance analysis, and high-throughput screening with experimental validation" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Direction I</span>
+      <h3>AI-accelerated materials discovery</h3>
+      <p>Designing and identifying molecules and materials for contact layers in perovskite solar cells by
+        integrating data mining, DFT calculations, and machine learning, and automating the design pipeline
+        with agentic AI.</p>
+      <p><a href="publications.html">Related: <i>Nature</i> 2026, <i>Nature Chemistry</i> 2026, <i>JACS</i> 2026 →</a></p>
+    </div>
+  </div>
+
+  <div class="direction reveal" id="mlip">
+    <div class="figure has-img"><img src="images/mlip.svg" alt="Schematic: DFT reference data trains a machine-learning interatomic potential used for large-scale molecular dynamics" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Direction II</span>
+      <h3>Machine-learning interatomic potentials</h3>
+      <p>Developing MLIPs for (1) perovskite/molecule contact interfaces, to probe atomistic interfacial
+        behavior through molecular dynamics at DFT-level accuracy and far lower cost, and (2) hydrocarbon
+        systems, to understand the reaction kinetics of aqueous carbon under deep-Earth conditions.</p>
+    </div>
+  </div>
+
+  <div class="direction reveal" id="kinetics">
+    <div class="figure has-img"><img src="images/pubs/19.png" alt="Kinetic network of heterogeneous ice nucleation pathways" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Direction III</span>
+      <h3>Kinetic modeling of phase transitions &amp; chemical reactions</h3>
+      <p>Constructing Markov state models to resolve the kinetics of phase transformations, such as ice
+        nucleation and perovskite crystallization, and of chemical reactions in hydrocarbon systems.</p>
+      <p><a href="publications.html">Related: <i>PNAS</i> 2025, <i>Nature Communications</i> 2021 →</a></p>
+    </div>
+  </div>
+
+  <h2 class="reveal">Expertise</h2>
+  <ul class="chips reveal">
+    <li>Classical &amp; ab initio MD</li><li>DFT calculations</li><li>Markov state modeling</li>
+    <li>Machine-learning force fields</li><li>Machine learning</li><li>Materials discovery</li>
+    <li>Data mining</li><li>AI for materials</li><li>Agentic AI</li>
+  </ul>
+
+  <h3 class="reveal">Software &amp; codes</h3>
+  <ul class="chips reveal">
+    <li>LAMMPS</li><li>Python</li><li>PyTorch</li><li>Quantum ESPRESSO</li><li>Qbox</li><li>CP2K</li>
+    <li>ORCA</li><li>VASP</li><li>MSMBuilder</li><li>DeepMD-kit</li><li>Fortran</li><li>C/C++</li>
+  </ul>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="data.js?v=20261015172823"></script>
+<script src="site.js?v=20261015172823"></script>
+</body>
+</html>

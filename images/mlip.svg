@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 440" font-family="Lato, 'Gill Sans', Calibri, sans-serif">
+  <defs>
+    <!-- PbI6 octahedron seen along an axis: diamond with Pb centre and I corners -->
+    <g id="oct">
+      <path d="M0 -26 L26 0 L0 26 L-26 0 Z" fill="#836eaa" fill-opacity=".35" stroke="#4e2a84" stroke-width="1.4"/>
+      <path d="M0 -26 L0 26 M-26 0 L26 0" stroke="#4e2a84" stroke-opacity=".35" stroke-width="1"/>
+      <circle r="6" fill="#4e2a84"/>
+      <circle cx="0" cy="-26" r="4.2" fill="#e8590c"/>
+      <circle cx="26" cy="0" r="4.2" fill="#e8590c"/>
+      <circle cx="0" cy="26" r="4.2" fill="#e8590c"/>
+      <circle cx="-26" cy="0" r="4.2" fill="#e8590c"/>
+    </g>
+    <!-- A-site cation -->
+    <circle id="a" r="4" fill="#0ca678"/>
+    <!-- interfacial molecule: aromatic ring + anchoring group -->
+    <g id="mol">
+      <path d="M0 -12 L10.4 -6 L10.4 6 L0 12 L-10.4 6 L-10.4 -6 Z" fill="#fff" stroke="#1c7ed6" stroke-width="2"/>
+      <path d="M0 12 L0 24" stroke="#1c7ed6" stroke-width="2"/>
+      <circle cx="0" cy="27" r="4" fill="#1c7ed6"/>
+    </g>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#4e2a84"/>
+    </marker>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9fc"/><stop offset="1" stop-color="#f1eef7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="440" fill="#fff"/>
+
+  <!-- ===== Panel 1: DFT reference data ===== -->
+  <rect x="16" y="16" width="270" height="408" rx="14" fill="url(#panel)" stroke="#e3e0ea"/>
+  <text x="151" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#2b2b2b">DFT reference data</text>
+  <text x="151" y="74" text-anchor="middle" font-size="15" fill="#6c6c6c">small cells · energies &amp; forces</text>
+  <!-- small periodic cell -->
+  <rect x="66" y="128" width="170" height="190" fill="none" stroke="#9a9a9a" stroke-dasharray="5 4"/>
+  <use href="#mol" xlink:href="#mol" x="126" y="112"/>
+  <use href="#mol" xlink:href="#mol" x="178" y="112"/>
+  <use href="#oct" xlink:href="#oct" x="114" y="200"/>
+  <use href="#oct" xlink:href="#oct" x="166" y="200"/>
+  <use href="#oct" xlink:href="#oct" x="114" y="252"/>
+  <use href="#oct" xlink:href="#oct" x="166" y="252"/>
+  <use href="#a" xlink:href="#a" x="140" y="226"/>
+  <use href="#a" xlink:href="#a" x="192" y="226"/>
+  <use href="#a" xlink:href="#a" x="88" y="226"/>
+  <use href="#a" xlink:href="#a" x="140" y="278"/>
+  <!-- force arrows -->
+  <g stroke="#d6336c" stroke-width="2.2" marker-end="url(#arr)">
+    <line x1="166" y1="200" x2="186" y2="186"/>
+    <line x1="114" y1="252" x2="98" y2="268"/>
+    <line x1="126" y1="100" x2="112" y2="86"/>
+  </g>
+  <text x="151" y="352" text-anchor="middle" font-size="16" fill="#2b2b2b"><tspan font-style="italic">E</tspan>, <tspan font-weight="700" font-style="italic">F</tspan><tspan font-size="12" dy="4">i</tspan><tspan dy="-4"> from first principles</tspan></text>
+  <text x="151" y="376" text-anchor="middle" font-size="14" fill="#9a9a9a">~10² atoms</text>
+
+  <!-- arrow 1 -->
+  <line x1="296" y1="220" x2="336" y2="220" stroke="#4e2a84" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="316" y="206" text-anchor="middle" font-size="13" fill="#4e2a84">train</text>
+
+  <!-- ===== Panel 2: ML potential ===== -->
+  <rect x="346" y="16" width="268" height="408" rx="14" fill="url(#panel)" stroke="#e3e0ea"/>
+  <text x="480" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#2b2b2b">ML interatomic potential</text>
+  <text x="480" y="74" text-anchor="middle" font-size="15" fill="#6c6c6c">local environment → atomic energy</text>
+  <!-- atomic environment -->
+  <circle cx="392" cy="220" r="34" fill="none" stroke="#4e2a84" stroke-dasharray="4 3"/>
+  <circle cx="392" cy="220" r="7" fill="#4e2a84"/>
+  <circle cx="376" cy="200" r="4" fill="#e8590c"/><circle cx="410" cy="204" r="4" fill="#e8590c"/>
+  <circle cx="404" cy="240" r="4" fill="#e8590c"/><circle cx="374" cy="236" r="4" fill="#0ca678"/>
+  <!-- network -->
+  <g stroke="#b9a3e3" stroke-width="1">
+    <path d="M436 170 L490 150 M436 170 L490 190 M436 170 L490 230 M436 170 L490 270 M436 170 L490 310
+             M436 220 L490 150 M436 220 L490 190 M436 220 L490 230 M436 220 L490 270 M436 220 L490 310
+             M436 270 L490 150 M436 270 L490 190 M436 270 L490 230 M436 270 L490 270 M436 270 L490 310
+             M490 150 L544 170 M490 190 L544 170 M490 230 L544 170 M490 270 L544 170 M490 310 L544 170
+             M490 150 L544 220 M490 190 L544 220 M490 230 L544 220 M490 270 L544 220 M490 310 L544 220
+             M490 150 L544 270 M490 190 L544 270 M490 230 L544 270 M490 270 L544 270 M490 310 L544 270
+             M544 170 L588 220 M544 220 L588 220 M544 270 L588 220"/>
+  </g>
+  <line x1="426" y1="220" x2="436" y2="220" stroke="#4e2a84" stroke-width="1.5"/>
+  <g fill="#fff" stroke="#4e2a84" stroke-width="2">
+    <circle cx="436" cy="170" r="9"/><circle cx="436" cy="220" r="9"/><circle cx="436" cy="270" r="9"/>
+    <circle cx="490" cy="150" r="9"/><circle cx="490" cy="190" r="9"/><circle cx="490" cy="230" r="9"/><circle cx="490" cy="270" r="9"/><circle cx="490" cy="310" r="9"/>
+    <circle cx="544" cy="170" r="9"/><circle cx="544" cy="220" r="9"/><circle cx="544" cy="270" r="9"/>
+  </g>
+  <circle cx="588" cy="220" r="12" fill="#4e2a84"/>
+  <text x="588" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-style="italic">E</text>
+  <text x="414" y="350" font-size="14" fill="#6c6c6c">descriptors</text>
+  <text x="514" y="350" font-size="14" fill="#6c6c6c">neural network</text>
+  <text x="480" y="384" text-anchor="middle" font-size="16" fill="#2b2b2b"><tspan font-style="italic">E</tspan> = Σ<tspan font-size="12" dy="4">i</tspan><tspan dy="-4"> </tspan><tspan font-style="italic">E</tspan><tspan font-size="12" dy="4">i</tspan><tspan dy="-4">,   </tspan><tspan font-weight="700" font-style="italic">F</tspan><tspan font-size="12" dy="4">i</tspan><tspan dy="-4"> = −∇</tspan><tspan font-size="12" dy="4">i</tspan><tspan dy="-4"> </tspan><tspan font-style="italic">E</tspan></text>
+
+  <!-- arrow 2 -->
+  <line x1="624" y1="220" x2="664" y2="220" stroke="#4e2a84" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="644" y="206" text-anchor="middle" font-size="13" fill="#4e2a84">deploy</text>
+
+  <!-- ===== Panel 3: large-scale MD ===== -->
+  <rect x="674" y="16" width="270" height="408" rx="14" fill="url(#panel)" stroke="#e3e0ea"/>
+  <text x="809" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#2b2b2b">Large-scale MD</text>
+  <text x="809" y="74" text-anchor="middle" font-size="15" fill="#6c6c6c">interfaces · reactions · long times</text>
+  <g transform="translate(809 236) scale(.62) translate(-809 -236)">
+    <!-- molecules at the interface -->
+    <use href="#mol" xlink:href="#mol" x="680" y="126"/><use href="#mol" xlink:href="#mol" x="732" y="120"/>
+    <use href="#mol" xlink:href="#mol" x="784" y="128"/><use href="#mol" xlink:href="#mol" x="836" y="118"/>
+    <use href="#mol" xlink:href="#mol" x="888" y="126"/><use href="#mol" xlink:href="#mol" x="940" y="122"/>
+    <!-- slab of octahedra -->
+    <g id="row">
+      <use href="#oct" xlink:href="#oct" x="680" y="200"/><use href="#oct" xlink:href="#oct" x="732" y="200"/>
+      <use href="#oct" xlink:href="#oct" x="784" y="200"/><use href="#oct" xlink:href="#oct" x="836" y="200"/>
+      <use href="#oct" xlink:href="#oct" x="888" y="200"/><use href="#oct" xlink:href="#oct" x="940" y="200"/>
+    </g>
+    <use href="#row" xlink:href="#row" y="52"/><use href="#row" xlink:href="#row" y="104"/><use href="#row" xlink:href="#row" y="156"/>
+    <g>
+      <use href="#a" xlink:href="#a" x="706" y="226"/><use href="#a" xlink:href="#a" x="758" y="226"/><use href="#a" xlink:href="#a" x="810" y="226"/>
+      <use href="#a" xlink:href="#a" x="862" y="226"/><use href="#a" xlink:href="#a" x="914" y="226"/>
+      <use href="#a" xlink:href="#a" x="706" y="278"/><use href="#a" xlink:href="#a" x="758" y="278"/><use href="#a" xlink:href="#a" x="810" y="278"/>
+      <use href="#a" xlink:href="#a" x="862" y="278"/><use href="#a" xlink:href="#a" x="914" y="278"/>
+      <use href="#a" xlink:href="#a" x="706" y="330"/><use href="#a" xlink:href="#a" x="758" y="330"/><use href="#a" xlink:href="#a" x="810" y="330"/>
+      <use href="#a" xlink:href="#a" x="862" y="330"/><use href="#a" xlink:href="#a" x="914" y="330"/>
+    </g>
+  </g>
+  <text x="809" y="384" text-anchor="middle" font-size="16" fill="#2b2b2b">DFT accuracy, far lower cost</text>
+  <text x="809" y="406" text-anchor="middle" font-size="14" fill="#9a9a9a">~10⁴–10⁶ atoms, ns timescales</text>
+</svg>

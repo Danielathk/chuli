@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications · Chu Li</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="style.css?v=20261015172823">
+</head>
+<body>
+<header id="site-header"></header>
+
+<main class="container">
+  <h1>Publications</h1>
+  <p class="pub-meta">(Last updated Oct. 2026. See <a href="https://scholar.google.com/citations?user=6NaASxIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    for the most up-to-date list.)</p>
+
+  <div class="filter">
+    <span class="filter-label">Research themes:</span>
+    <span id="theme-filter" style="display:contents"></span>
+  </div>
+  <p class="legend">† co-first author · * corresponding author</p>
+  <hr style="border:0;border-top:1px solid var(--line);margin:0">
+
+  <div id="pub-lists">
+    <h2>Selected Publications</h2>
+    <ol class="pubs" id="pubs-selected"></ol>
+    <h2>Other Publications</h2>
+    <ol class="pubs" id="pubs-all"></ol>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="data.js?v=20261015172823"></script>
+<script src="site.js?v=20261015172823"></script>
+<script>
+  renderPubs(document.getElementById("pubs-selected"), { selectedOnly: true });
+  renderPubs(document.getElementById("pubs-all"), { excludeSelected: true });
+  renderThemeFilter(document.getElementById("theme-filter"), document.getElementById("pub-lists"));
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chu Li · Northwestern University</title>
+  <meta name="description" content="Chu Li — Research Associate in Chemistry at Northwestern University. First-principles calculations, atomistic simulations, kinetic modeling, and machine learning for phase transitions, chemistry under extreme conditions, materials design, and high-performance perovskite solar cells.">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="style.css?v=20261015172823">
+</head>
+<body>
+<header id="site-header"></header>
+
+<!-- ===== Highlight carousel =====
+     Each slide shows a paper figure (images/pubs/) under its caption. -->
+<section class="carousel">
+  <div class="slide fig">
+    <div class="caption"><b>Phase-homogeneous mixed-halide perovskites</b>
+      <span>Stable perovskite tandem photovoltaics · <i>Nature</i> (2026)</span>
+      <a href="https://doi.org/10.1038/s41586-026-10929-2" target="_blank" rel="noopener">Read the paper →</a></div>
+    <img src="images/pubs/21.png" alt="Figure from the Nature 2026 paper on phase-homogeneous mixed-halide perovskites">
+  </div>
+  <div class="slide fig">
+    <div class="caption"><b>Sterically gated Lewis acid–base pairs</b>
+      <span>Orthogonal defect passivation in perovskite solar cells · <i>Nature Chemistry</i> (2026)</span>
+      <a href="https://doi.org/10.1038/s41557-026-02261-z" target="_blank" rel="noopener">Read the paper →</a></div>
+    <img src="images/pubs/22.png" alt="Strong versus weak Lewis acid–base coordination for dual defect passivation">
+  </div>
+  <div class="slide fig">
+    <div class="caption"><b>Hidden reaction kinetics of CO<sub>2</sub> in supercritical water</b>
+      <span>First-principles Markov state models of deep-Earth carbon · <i>PNAS</i> (2025)</span>
+      <a href="https://doi.org/10.1073/pnas.2406356121" target="_blank" rel="noopener">Read the paper →</a></div>
+    <img src="images/pubs/20.png" alt="Workflow for constructing Markov state models of dissolved carbon">
+  </div>
+  <div class="slide fig">
+    <div class="caption"><b>Classical vs. non-classical ice nucleation</b>
+      <span>Temperature-dependent kinetic pathways · <i>Nature Communications</i> (2021)</span>
+      <a href="https://doi.org/10.1038/s41467-021-25267-2" target="_blank" rel="noopener">Read the paper →</a></div>
+    <img src="images/pubs/19.png" alt="Ice nucleation pathway network and critical nuclei">
+  </div>
+  <button class="prev" aria-label="Previous">‹</button>
+  <button class="next" aria-label="Next">›</button>
+  <div class="dots"></div>
+</section>
+
+<main class="container">
+  <div class="home-grid">
+    <div class="welcome">
+      <h1>Welcome!</h1>
+      <p>I am a Research Associate in the <a href="https://chemistry.northwestern.edu/" target="_blank" rel="noopener">Department of Chemistry</a>
+        at Northwestern University, working with <a href="https://light.northwestern.edu/" target="_blank" rel="noopener">Prof. Edward H. Sargent</a>.</p>
+      <p>I am a computational scientist working at the intersection of first-principles calculations, atomistic
+        simulation, kinetic modeling, and machine learning. My work spans phase transitions, chemistry under extreme
+        conditions, 2D materials, and materials design, from ice nucleation, nanoconfined water, and carbon reactions in
+        supercritical fluids to phonons in twisted bilayer graphene and materials discovery for perovskite solar cells. My current focus is <b>machine learning accelerated discovery of
+        materials for stable, high-performance perovskite solar cells</b>, with the design pipeline increasingly
+        automated by agentic AI.</p>
+      <p>Before Northwestern, I was a Research Assistant Professor and postdoctoral fellow at HKUST, working with
+        <a href="https://angstrom.hkust.edu.hk/" target="_blank" rel="noopener">Prof. Ding Pan</a> and <a href="https://huang.chem.wisc.edu/" target="_blank" rel="noopener">Prof. Xuhui Huang</a>, and received my Ph.D. in Mechanical Engineering from HKUST under the supervision of <a href="https://seng.hkust.edu.hk/about/people/faculty/zhigang-li" target="_blank" rel="noopener">Prof. Zhigang Li</a>.</p>
+      <div class="cta">
+        <a class="btn solid" href="research.html">Explore my research</a>
+        <a class="btn" href="publications.html">Publications</a>
+      </div>
+    </div>
+
+    <aside class="news-box">
+      <h4>RECENT NEWS</h4>
+      <ul class="news" id="news-recent"></ul>
+      <a class="more" href="news.html">… see all news</a>
+    </aside>
+  </div>
+
+</main>
+
+<footer id="site-footer"></footer>
+<script src="data.js?v=20261015172823"></script>
+<script src="site.js?v=20261015172823"></script>
+<script>
+  renderNews(document.getElementById("news-recent"), 5);
+  initCarousel(document.querySelector(".carousel"));
+</script>
+</body>
+</html>

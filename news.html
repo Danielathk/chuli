@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News · Chu Li</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="style.css?v=20261015172823">
+</head>
+<body>
+<header id="site-header"></header>
+
+<main class="container" style="max-width:860px">
+  <h1>News</h1>
+  <!-- News items are edited in data.js -->
+  <ul class="timeline" id="news-all"></ul>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="data.js?v=20261015172823"></script>
+<script src="site.js?v=20261015172823"></script>
+<script>renderNews(document.getElementById("news-all"));</script>
+</body>
+</html>
